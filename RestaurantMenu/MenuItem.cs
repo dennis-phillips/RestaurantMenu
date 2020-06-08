@@ -30,7 +30,7 @@ namespace RestaurantMenu
                 
             }
         }
-        public string dateAdded = DateTime.Today.ToString("MMMM dd");
+        public string dateAdded = DateTime.Now.ToString("MMMM dd h:mm tt");
         public MenuItem(string Name, string description, string category, double price)
         {
             this.Name = Name;
@@ -40,7 +40,31 @@ namespace RestaurantMenu
             
         }
 
-    }
+        
+        public override bool Equals(object toBeCompared)
+        {
+
+            if (toBeCompared == this)
+            {
+                return true;
+            }
+
+            if (toBeCompared == null)
+            {
+                return false;
+            }
+
+            if (toBeCompared.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            MenuItem s = toBeCompared as MenuItem;
+            return s.Name == Name;
+        }
+
+    }   
+        
 
     
 }

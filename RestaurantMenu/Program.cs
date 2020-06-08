@@ -16,8 +16,16 @@ namespace RestaurantMenu
             newMenu.Add(reuben);
             newMenu.Add(pancakes);
             newMenu.Add(beer);
+            
             Menu myRestaurantMenu = new Menu(newMenu);
+            //myRestaurantMenu.PrintMenu();
+
+            //myRestaurantMenu.PrintMenuItem();
+            myRestaurantMenu.AddMenuItem();
             myRestaurantMenu.PrintMenu();
+            //myRestaurantMenu.DeleteMenuItem();
+            //myRestaurantMenu.PrintMenu();
+            
             //Console.WriteLine(pancakes.description);
             
         }
